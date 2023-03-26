@@ -2,5 +2,5 @@
 
 mkdir -p results
 
-tree -L 2 . >results/project_tree.txt
+tree -L 3 . >results/project_tree.txt
 

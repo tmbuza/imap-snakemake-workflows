@@ -1,7 +1,7 @@
 ---
-title:  "<big><u>IMAP-WORKFLOWS</u></big><br><br>Microbial profiling using MOTHUR pipeline with Snakemake workflows<br><br>"
+title:  "<big><u>IMAP-WORKFLOWS</u></big><br><br>Snakemake workflows for microbiome and multi-omics data analysis<br><br>"
 subtitle: |
-  | ![](images/bioinformatics.png)<br>
+  | ![](../global/cicd.png)<br>
   | Fostering Reproducible Microbiome data Analysis with Snakemake workflow
 date:
 - MAP-WORKFLOWS<br>[Latest GitHub-Repo](https://github.com/tmbuza/imap-snakemake-workflows/)<br>
@@ -24,7 +24,6 @@ github_repo: "https://github.com/tmbuza/imap-snakemake-workflows"
 description: |
   | How to get started with systematic microbiome data analysis with Snakemake workflows.
 ---
-
 
 
 <div id="main-container">
@@ -58,35 +57,75 @@ library(tidyverse, suppressPackageStartupMessages())
 library(schtools)
 ```
 
-# Microbiome Bioinformatics Snakemake workflow
+# Microbiome data analysis
 
 ...BRIEF INTRO IN PROGRESS...
 
-<br>
-
-```{bash ruledag, include=FALSE}
-bash workflow/scripts/rules_dag.sh
-```
-
-![](dags/rulegraph.svg)
-
-A tentative snakemake workflow that defines **mothur and qiime2 bioinformatics rules** in a DAG (directed acyclic graph) format. 
-A detailed interactive snakemake report is available [here](https://complexdatainsights.com/imap/imap-bioinformatics-mothur/report.html).
-
+## IMAP-PART 01 
+### Software requirement for microbiome data analysis
 
 <br>
 
-```{r child='workflow/scripts/01_mothur_pipeline.Rmd'}
-```
+![](images/imap_part01.svg)
 
 <br>
 
-```{r child='workflow/scripts/02_qiime2_pipeline.Rmd'}
-```
+## IMAP-PART 02 
+### Exploring and profiling SRA sample metadata
+
+<br>
+
+![](images/imap_part02.svg)
+
+<br>
+
+## IMAP-PART 03 
+### Downloading SRA FastQ reads using fasterq-dump
+
+<br>
+
+![](images/imap_part03.svg)
+
+<br>
+
+## IMAP-PART 04 
+### Quality Control of Sequencing Reads
+
+<br>
+
+![](images/imap_part04.svg)
+
+<br>
+
+## IMAP-PART 05 
+### Microbial profiling with MOTHUR pipeline
+
+<br>
+
+![](images/imap_part05.svg)
+
+<br>
+
+## IMAP-PART 06
+### Microbial profiling with QIIME2 pipeline
+
+<br>
+
+![](images/imap_part06.svg)
+
+<br>
+
+## IMAP-PART 07
+### Microbial & functional profiling with BIOBAKERY pipelines
+
+<br>
+
+![](images/imap_part07.svg)
+
 
 <br><hr width=100%><br>
 
-# Related work
+## Related work
 ```{block imaprepos, echo=TRUE}
 
 | Repo | Description | Status |
@@ -98,9 +137,17 @@ A detailed interactive snakemake report is available [here](https://complexdatai
 | [IMAP-PART 04](https://github.com/tmbuza/imap-read-quality-control/) | Quality Control of Microbiome Next Generation Sequencing Reads | [In-progress](https://tmbuza.github.io/imap-read-quality-control/) |
 | [IMAP-PART 05](https://github.com/tmbuza/imap-bioinformatics-mothur/) | Microbial profiling using MOTHUR pipeline with Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-bioinformatics-mothur/) |
 | [IMAP-PART 06](https://github.com/tmbuza/imap-bioinformatics-qiime2/) | Microbial profiling using QIIME2 pipeline with Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-bioinformatics-qiime2/) |
-| [IMAP-PART 07](https://github.com/tmbuza/imap-bioinformatics-biobakery/) | Microbial & Functional profiling using Biobakery pipelines with Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-metagenomics-analysis/) |
-| [IMAP-SUMMARY](https://github.com/tmbuza/imap-snakemake-workflows/) | Summary ofnakemake workflows for microbiome data analysis | [In-progress](https://tmbuza.github.io/imap-snakemake-workflows/) |
+| [IMAP-PART 07](https://github.com/tmbuza/imap-bioinformatics-biobakery/) | Microbial & Functional profiling using BIOBAKERY pipelines with Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-metagenomics-analysis/) |
+| [IMAP-SUMMARY](https://github.com/tmbuza/imap-snakemake-workflows/) | Summary of Snakemake workflows for microbiome data analysis | [In-progress](https://tmbuza.github.io/imap-snakemake-workflows/) |
 ```
+
+<br><hr width=100%><hr width=100%><br>
+
+# Multi-Omics data analysis
+
+...BRIEF INTRO IN PROGRESS...
+
+<br>
 
 ## Citation
 
@@ -125,46 +172,7 @@ bash workflow/scripts/tree.sh
 cat results/project_tree.txt
 ```
 
-## Static snakemake report {#smkreport}
-> The interactive snakemake HTML report can be viewed by opening the `report.html` using any compatible browser. You will be able to explore the workflow and the associated statistics. You can close the left bar to get a more expansive display view.
-
-```{bash smkrpt, include=FALSE}
-snakemake --unlock;
-snakemake --report report.html;
-pip install html2image
-hti -H report.html -o images/smkreport;
-```
-
-<img src="images/smkreport/screenshot.png">
-
-## Summary of Informative workflows
-
 <br>
-
-![](images/smkreport/screenshot.png)
-
-<br>
-
-![](images/sra_config_cache.png)
-
-<br>
-
-![](images/imap_part02.svg)
-
-<br>
-
-![](images/imap_part03.svg)
-
-<br>
-
-![](images/imap_part04.svg)
-
-<br>
-
-![](images/imap_part05.svg)
-
-<br>
-
 
 ## Troubleshooting of FAQs
 <ol>
