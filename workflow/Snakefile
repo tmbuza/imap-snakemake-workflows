@@ -9,9 +9,16 @@ report: "report/workflow.rst"
 
 rule all:
 	input:
-		expand("images/{imappart}.svg", imappart=config["imappart"]),
-
-		"index.html"
+		"images/imap_part01.svg",
+		"images/imap_part02.svg",
+		"images/imap_part03.svg",
+		"images/imap_part04.svg",
+		"images/imap_part05.svg",
+		"images/imap_part06.svg",
+		"images/imap_part07.svg",
+		"images/imap.png",
+		"dags/rulegraph.svg",
+		"index.html",
 
 # Images to include in report
 rule get_files4smk_report:
@@ -20,8 +27,8 @@ rule get_files4smk_report:
 		part2=report("images/imap_part02.svg", caption="report/srametadata.rst", category="SRA Metadata Download"),
 		part3=report("images/imap_part03.svg", caption="report/srareads.rst", category="SRA FastQ Download"),
 		part4=report("images/imap_part04.svg", caption="report/readqc.rst", category="Read QC Analysis"),
-		part5=report("images/imap_part05.svg", caption="report/mothur.rst", category="16S-Mothur Analysis"),
-		part6=report("images/imap_part06.svg", caption="report/qiime2.rst", category="16S-QIIME2 Analysis"),
+		part5=report("images/imap_part05.svg", caption="report/mothur.rst", category="Mothur 16S Analysis"),
+		part6=report("images/imap_part06.svg", caption="report/qiime2.rst", category="QIIME2 16S Analysis"),
 		part7=report("images/imap_part07.svg", caption="report/biobakery.rst", category="Metagenomics Analysis"),
 		imap=report("images/imap.png", caption="report/imap.rst", category="IMAP Parts"),
 	shell:
