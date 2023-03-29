@@ -53,6 +53,16 @@ rule project_tree:
         bash workflow/scripts/tree.sh
         """
 
+# Get smk static report
+rule static_smk_report:
+    output:
+        smkhtml="report.html",
+        html2png="images/smkreport/screenshot.png"
+    shell:
+        """
+        bash workflow/scripts/smk_html_report.sh
+        """
+
 # GHPages
 rule deploy_to_github_pages:
     output:
