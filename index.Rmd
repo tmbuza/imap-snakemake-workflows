@@ -117,11 +117,19 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 <br>
 
 ## IMAP-PART 07
-### Microbial & functional profiling with BIOBAKERY pipelines
+### Data processing for download analysis
 
 <br>
 
-![Explore the IMAP-PART 07 interactive snakemake report (if available) [here.](https://complexdatainsights.com/imap/imap-bioinformatics-biobakery/report.html)](images/imap_part07.svg)
+![Explore the IMAP-PART 07 interactive snakemake report (if available) [here.](https://complexdatainsights.com/imap/imap-data-processing/report.html)](images/imap_part07.svg)
+
+
+## IMAP-PART 08
+### Data exploration and visualization
+
+<br>
+
+![Explore the IMAP-PART 08 interactive snakemake report (if available) [here.](https://complexdatainsights.com/imap/imap-exploratory-analysis/report.html)](images/imap_part07.svg)
 
 
 <br><hr width=100%><br>
@@ -136,10 +144,11 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 | [IMAP-PART 02](https://github.com/tmbuza/imap-sample-metadata/) | Downloading and exploring microbiome sample metadata from SRA Database | [In-progress](https://tmbuza.github.io/imap-sample-metadata/) |
 | [IMAP-PART 03](https://github.com/tmbuza/imap-download-sra-reads/) | Downloading and filtering microbiome sequencing data from SRA database | [In-progress](https://tmbuza.github.io/imap-download-sra-reads/) |
 | [IMAP-PART 04](https://github.com/tmbuza/imap-read-quality-control/) | Quality Control of Microbiome Next Generation Sequencing Reads | [In-progress](https://tmbuza.github.io/imap-read-quality-control/) |
-| [IMAP-PART 05](https://github.com/tmbuza/imap-bioinformatics-mothur/) | Microbial profiling using Mothur pipeline with Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-bioinformatics-mothur/) |
-| [IMAP-PART 06](https://github.com/tmbuza/imap-bioinformatics-qiime2/) | Microbial profiling using Qiime2 pipeline with Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-bioinformatics-qiime2/) |
-| [IMAP-PART 07](https://github.com/tmbuza/imap-bioinformatics-biobakery/) | Microbial & Functional profiling using Biobakery pipelines with Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-metagenomics-analysis/) |
-| [IMAP-SUMMARY](https://github.com/tmbuza/imap-snakemake-workflows/) | Summary of Snakemake workflows for microbiome data analysis | [In-progress](https://tmbuza.github.io/imap-snakemake-workflows/) |
+| [IMAP-PART 05](https://github.com/tmbuza/imap-bioinformatics-mothur/) | Microbial profiling using MOTHUR and Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-bioinformatics-mothur/) |
+| [IMAP-PART 06](https://github.com/tmbuza/imap-bioinformatics-qiime2/) | Microbial profiling using QIIME2 and Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-bioinformatics-qiime2/) |
+| [IMAP-PART 07](https://github.com/tmbuza/imap-data-processing/) | Processing Output from 16S-Based microbiome bioinformatics pipelines| [In-progress](https://tmbuza.github.io/imap-data-processing/) |
+| [IMAP-PART 08](https://github.com/tmbuza/imap-exploratory-analysis/) | Exploratory Analysis of 16S-Based Microbiome Processed Data | [In-progress](https://tmbuza.github.io/imap-exploratory-analysis/) |
+| [IMAP-SUMMARY](https://github.com/tmbuza/imap-snakemake-workflows/) | Summary of snakemake workflows for microbiome data analysis | [In-progress](https://tmbuza.github.io/imap-snakemake-workflows/) |
 ```
 
 <br><hr width=100%><hr width=100%><br>
@@ -175,7 +184,7 @@ cat results/project_tree.txt
 
 <br>
 
-![](mages/smkreport/screenshot.png)
+![](images/smkreport/screenshot.png)
 
 <br>
 
