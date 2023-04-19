@@ -7,9 +7,22 @@ configfile: "config/config.yml"
 
 report: "report/workflow.rst"
 
+include: "rules/smk_workflows.smk"
 include: "rules/rmd_report.smk"
 
 
 rule all:
 	input:
+		"images/imap_part00.png",
+		"images/imap_part01.svg",
+		"images/imap_part02.svg",
+		"images/imap_part03.svg", 
+		"images/imap_part04.svg", 
+		"images/imap_part05.svg",
+		"images/imap_part06.svg",
+		"images/imap_part07.svg",
+		"images/imap_part08.svg",
+		"images/imap_part09.svg",
+		"images/imap_part10.svg",
+		"images/imap_part11.svg",
 		"index.html",

@@ -1,7 +1,7 @@
 ---
 title:  "<big><u>IMAP-WORKFLOWS</u></big><br><br>Snakemake workflows for microbiome and multi-omics data analysis<br><br>"
 subtitle: |
-  | ![](../global/cicd.png)<br>
+  | ![](images/cicd.png)<br>
   | Fostering Reproducible Microbiome data Analysis with Snakemake workflow
 date:
 - MAP-WORKFLOWS<br>[Latest GitHub-Repo](https://github.com/tmbuza/imap-snakemake-workflows/)<br>
@@ -57,13 +57,46 @@ library(tidyverse, suppressPackageStartupMessages())
 library(schtools)
 ```
 
-# Microbiome and multi-omics snakemake workflows
-## General overview
-The workflows displayed in this document define the **snakemake rules** in a DAG (directed acyclic graph) format. 
-You may find a link to the interactive snakemake HTML report in some workflow. The link will enable you to explore the workflow and associated statistics. While exploring the interactive workflow, you can close the left bar (the overlap) to get a more expansive display view.
+# General Overview of IMAP project
+
+**IMAP** stands for **Integrated Microbiome Analysis Pipelines** but can also stands for **Integrated Multi-Omics Analysis Pipelines**. 
+IMAP for microbiome analysis comprises different parts which individually, represents a standalone GitHub repository prefixed with {**imap-**}. When used sequentially, these parts can provide a systematic microbiome data analysis beyond the traditional methods. 
+
+<br>
+
+![IMAP tentative parts: Each part forms a standalone git repository containing similar project stucture.](images/imap.png)
+
+<br>
+
+
+## IMAP approach
+- We use the snakemake workflow management system [@Koster2021; @Snakemake2023] to:
+  - Maintain reproducibility in technical validation and regeneration of results.
+  - Create scalable data analysis.
+  - Foster sustainable improvement of the microbiome data analysis.
+  - Ensure adaptability that enables users to modify the analysis to answer extended research questions.
+  - Ensure transparency of the technical analysis methodologies.
+- We break complex workflows into small contiguous but related chunks where each major step forms a separate executable snakemake rule.
+
+<br>
+
+## Mission and Vision
+We envision fostering continuous integration and improvement of highly reproducible and sustainable workflows for microbiome data analysis.
+
+<br>
+
+## IMAP snakemake workflow series
+The workflows define the **snakemake rules** in a DAG (directed acyclic graph) format. 
+You may find a link to the interactive snakemake HTML report in some of the workflows. The link will enable you explore the analysis workflow, associated statistics and in some the result. While exploring the interactive workflow, you can close the left bar (the overlap) to get a more expansive display view. 
+
+> NOTE! Use a wider screen (landscape) when viewing the interactive report. 
+
+<br>
+
+# Category 01: Microbiome snakemake workflows
 
 ## IMAP-PART 01 
-### Software requirement for microbiome data analysis
+### Title: Software requirement for microbiome data analysis with Snakemake workflows
  
 <br>
 
@@ -72,7 +105,7 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 <br>
 
 ## IMAP-PART 02 
-### Exploring and profiling SRA sample metadata
+### Title: Downloading and exploring microbiome sample metadata from SRA Database
 
 <br>
 
@@ -81,7 +114,7 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 <br>
 
 ## IMAP-PART 03 
-### Downloading SRA FastQ reads using fasterq-dump
+### Title: Downloading microbiome fastq sequences from SRA database
 
 <br>
 
@@ -90,7 +123,7 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 <br>
 
 ## IMAP-PART 04 
-### Quality Control of Sequencing Reads
+### Title: Quality Control of Microbiome Next Generation Sequencing Reads
 
 <br>
 
@@ -99,7 +132,7 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 <br>
 
 ## IMAP-PART 05 
-### Microbial profiling with MOTHUR pipeline
+### Title: Microbial profiling using Mothur pipeline with Snakemake workflows
 
 <br>
 
@@ -108,7 +141,7 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 <br>
 
 ## IMAP-PART 06
-### Microbial profiling with QIIME2 pipeline
+### Title: Microbial profiling using QIIME2 pipeline with Snakemake workflows
 
 <br>
 
@@ -117,7 +150,7 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 <br>
 
 ## IMAP-PART 07
-### Data processing for download analysis
+### Title: Processing Output from 16S-based microbiome bioinformatics pipelines
 
 <br>
 
@@ -125,11 +158,37 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 
 
 ## IMAP-PART 08
-### Data exploration and visualization
+### Title: Exploratory Analysis of 16S-Based Microbial Profiles
 
 <br>
 
-![Explore the IMAP-PART 08 interactive snakemake report (if available) [here.](https://complexdatainsights.com/imap/imap-exploratory-analysis/report.html)](images/imap_part07.svg)
+![Explore the IMAP-PART 08 interactive snakemake report (if available) [here.](https://complexdatainsights.com/imap/imap-exploratory-analysis/report.html)](images/imap_part08.svg)
+
+
+
+## IMAP-PART 09
+### Title: Multi-Dimensional Data Visualization with integrated tools and Snakemake workflow
+
+<br>
+
+![Explore the IMAP-PART 09 interactive snakemake report (if available) [here.](https://complexdatainsights.com/imap/imap-visualize-abundance/report.html)](images/imap_part09.svg)
+
+
+
+## IMAP-PART 10
+### Title: Microbiome Alpha diversity analysis
+
+<br>
+
+![Explore the IMAP-PART 10 interactive snakemake report (if available) [here.](https://complexdatainsights.com/imap/#/report.html)](images/imap_part10.svg)
+
+
+## IMAP-PART 11
+### Title: Microbiome Beta diversity analysis
+
+<br>
+
+![Explore the IMAP-PART 11 interactive snakemake report (if available) [here.](https://complexdatainsights.com/imap/#/report.html)](images/imap_part11.svg)
 
 
 <br><hr width=100%><br>
@@ -139,7 +198,7 @@ You may find a link to the interactive snakemake HTML report in some workflow. T
 
 | Repo | Description | Status |
 |:-----------------------|----------------------------------|--------------:|
-| [IMAP-GLIMPSE](https://github.com/datainsights/imap-project-overview/) | IMAP project overview | [In-progress](https://datainsights.github.io/imap-project-overview/) |
+| [IMAP-OVERVIEW](https://github.com/datainsights/imap-project-overview/) | IMAP project overview | [In-progress](https://datainsights.github.io/imap-project-overview/) |
 | [IMAP-PART 01](https://github.com/tmbuza/imap-software-requirements/) | Software requirement for microbiome data analysis with Snakemake workflows | [In-progress](https://tmbuza.github.io/imap-software-requirements/) |
 | [IMAP-PART 02](https://github.com/tmbuza/imap-sample-metadata/) | Downloading and exploring microbiome sample metadata from SRA Database | [In-progress](https://tmbuza.github.io/imap-sample-metadata/) |
 | [IMAP-PART 03](https://github.com/tmbuza/imap-download-sra-reads/) | Downloading and filtering microbiome sequencing data from SRA database | [In-progress](https://tmbuza.github.io/imap-download-sra-reads/) |
